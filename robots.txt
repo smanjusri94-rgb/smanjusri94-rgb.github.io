@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# TODO: IMPORTANT - Replace the URL below with your actual website URL
+# Example shown for template demo: https://prince-portfolio-template.netlify.app/sitemap.xml
+# Replace [INSERT YOUR WEBSITE URL HERE] with your actual domain when customizing
+Sitemap: https://prince-portfolio-template.netlify.app/sitemap.xml
+# TODO: Change to: Sitemap: [INSERT YOUR WEBSITE URL HERE]/sitemap.xml
+

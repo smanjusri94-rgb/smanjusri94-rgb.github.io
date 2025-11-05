@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: IMPORTANT - Replace all URLs below with your actual website domain -->
+<!-- Example URLs shown for template demo: https://prince-portfolio-template.netlify.app/ -->
+<!-- Replace [INSERT YOUR WEBSITE URL HERE] with your actual domain when customizing -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://prince-portfolio-template.netlify.app/</loc>
+    <!-- TODO: Change to: [INSERT YOUR WEBSITE URL HERE]/ -->
+  </url>
+  <url>
+    <loc>https://prince-portfolio-template.netlify.app/project-1</loc>
+    <!-- TODO: Change to: [INSERT YOUR WEBSITE URL HERE]/project-1 -->
+  </url>
+  <url>
+    <loc>https://prince-portfolio-template.netlify.app/project-2</loc>
+    <!-- TODO: Change to: [INSERT YOUR WEBSITE URL HERE]/project-2 -->
+  </url>
+  <url>
+    <loc>https://prince-portfolio-template.netlify.app/project-3</loc>
+    <!-- TODO: Change to: [INSERT YOUR WEBSITE URL HERE]/project-3 -->
+  </url>
+  <url>
+    <loc>https://prince-portfolio-template.netlify.app/project-4</loc>
+    <!-- TODO: Change to: [INSERT YOUR WEBSITE URL HERE]/project-4 -->
+  </url>
+</urlset>
+

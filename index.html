@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TODO: IMPORTANT - Replace all [INSERT YOUR...] placeholders with your information -->
+    <!-- Example URLs shown for template demo: https://prince-portfolio-template.netlify.app/ -->
+    <!-- Replace [INSERT YOUR WEBSITE URL HERE] with your actual domain when customizing -->
+    <title>[INSERT YOUR NAME HERE] | [INSERT YOUR TITLE HERE] Portfolio</title>
+    <meta name="description" content="[INSERT YOUR NAME HERE]'s portfolio: [INSERT YOUR PORTFOLIO DESCRIPTION HERE]">
+    <meta name="keywords" content="[INSERT YOUR NAME HERE], [INSERT YOUR TITLE HERE], [INSERT YOUR KEYWORDS HERE]">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="[INSERT YOUR NAME HERE]">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="icon" type="image/png" href="/assets/web-logo.png">
+    <link rel="apple-touch-icon" href="/assets/web-logo.png">
+    <link rel="canonical" href="https://prince-portfolio-template.netlify.app/">
+    <!-- TODO: Change canonical to: [INSERT YOUR WEBSITE URL HERE]/ -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="[INSERT YOUR NAME HERE] | [INSERT YOUR TITLE HERE] Portfolio">
+    <meta property="og:description" content="[INSERT YOUR PORTFOLIO DESCRIPTION HERE]">
+    <meta property="og:url" content="https://prince-portfolio-template.netlify.app/">
+    <!-- TODO: Change og:url to: [INSERT YOUR WEBSITE URL HERE]/ -->
+    <meta property="og:image" content="https://prince-portfolio-template.netlify.app/assets/social-share.png">
+    <!-- TODO: Change og:image to: [INSERT YOUR WEBSITE URL HERE]/assets/social-share.png -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="[INSERT YOUR NAME HERE] | [INSERT YOUR TITLE HERE] Portfolio">
+    <meta name="twitter:description" content="[INSERT YOUR PORTFOLIO DESCRIPTION HERE]">
+    <meta name="twitter:url" content="https://prince-portfolio-template.netlify.app/">
+    <!-- TODO: Change twitter:url to: [INSERT YOUR WEBSITE URL HERE]/ -->
+    <meta name="twitter:image" content="https://prince-portfolio-template.netlify.app/assets/social-share.png">
+    <!-- TODO: Change twitter:image to: [INSERT YOUR WEBSITE URL HERE]/assets/social-share.png -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":"[INSERT YOUR NAME HERE]","url":"https://prince-portfolio-template.netlify.app/","sameAs":["[INSERT YOUR LINKEDIN URL HERE]","[INSERT YOUR GITHUB URL HERE]"],"jobTitle":"[INSERT YOUR TITLE HERE]","email":"mailto:[INSERT YOUR EMAIL HERE]"}
+    <!-- TODO: Change "url" in JSON-LD to: "[INSERT YOUR WEBSITE URL HERE]/" -->
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{fontFamily:{serif:['"Halant"','serif']}}}}</script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- TODO: Customize welcome section text -->
+    <section id="intro" class="welcome-section"><div class="container"><h1 class="welcome-title">WELCOME TO MY<br class="mobile-break"><span class="text-flip-container"><span class="text-flip-word" id="flip-text">GALLERY</span></span></h1><p class="welcome-subtitle">Hi my name is [INSERT YOUR NAME HERE]</p><p class="welcome-tagline">[INSERT YOUR TAGLINE HERE]</p></div></section>
+    <!-- TODO: Replace About Me section with your own bio -->
+    <section id="about" class="about-section"><div class="container"><h2 class="about-title">About Me</h2><div class="about-content"><p class="about-text">
+                    [INSERT YOUR BIO PARAGRAPH 1 HERE - Write about your background, education, and professional experience]
+                </p><p class="about-text">
+                    [INSERT YOUR BIO PARAGRAPH 2 HERE - Write about your projects, skills, and what you're passionate about]
+                </p>                <p class="about-text">
+                    [INSERT YOUR BIO PARAGRAPH 3 HERE - Write about your side projects, interests, or anything else you want to share]
+                </p></div>
+                <!-- TODO: Add your resume PDF to assets/resume.pdf -->
+                <div style="text-align: center; margin-top: 2.5rem;">
+                    <a href="./assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="github-link button" style="display: inline-block;"><span class="button_top">View Resume</span></a>
+                </div></div></section>
+    <!-- TODO: Replace project gallery with your own projects -->
+    <!-- Template supports 4 projects maximum -->
+    <!-- Each project needs exactly 2 images for the masonry layout on homepage -->
+    <!-- Each project can have 1 video (optional) on the project detail page -->
+    <!-- Update href, src, alt, h3, and p tags with your project information -->
+    <section id="projects" class="projects-section"><div class="container"><h2 class="section-title">MY ART PIECES</h2>
+        <div class="columns-2 sm:columns-2 md:columns-3 lg:columns-3 xl:columns-3 gap-x-4 space-y-4" data-projects-masonry="true">
+            <!-- PROJECT 1 - Image 1 -->
+            <a href="/project-1" class="group block bg-gray-100 rounded-lg overflow-hidden relative"><img src="./assets/project-1/image-1.png" alt="[PROJECT 1 NAME] - Image 1" class="h-auto max-w-full object-cover object-center w-full" loading="lazy" decoding="async"><div class="absolute inset-0 bg-black/50 text-white p-4 flex flex-col justify-end transition-opacity opacity-100 md:opacity-0 md:group-hover:opacity-100"><h3 class="text-lg font-semibold">[PROJECT 1 NAME]</h3><p class="text-sm">[Tech Stack • Listed • Here]</p></div></a>
+            <!-- PROJECT 1 - Image 2 -->
+            <a href="/project-1" class="group block bg-gray-100 rounded-lg overflow-hidden relative"><img src="./assets/project-1/image-2.png" alt="[PROJECT 1 NAME] - Image 2" class="h-auto max-w-full object-cover object-center w-full" loading="lazy" decoding="async"><div class="absolute inset-0 bg-black/50 text-white p-4 flex flex-col justify-end transition-opacity opacity-100 md:opacity-0 md:group-hover:opacity-100"><h3 class="text-lg font-semibold">[PROJECT 1 NAME]</h3><p class="text-sm">[Brief Description]</p></div></a>
+            <!-- PROJECT 2 - Image 1 -->
+            <a href="/project-2" class="group block bg-gray-100 rounded-lg overflow-hidden relative"><img src="./assets/project-2/image-1.png" alt="[PROJECT 2 NAME] - Image 1" class="h-auto max-w-full object-cover object-center w-full" loading="lazy" decoding="async"><div class="absolute inset-0 bg-black/50 text-white p-4 flex flex-col justify-end transition-opacity opacity-100 md:opacity-0 md:group-hover:opacity-100"><h3 class="text-lg font-semibold">[PROJECT 2 NAME]</h3><p class="text-sm">[Tech Stack • Listed • Here]</p></div></a>
+            <!-- PROJECT 2 - Image 2 -->
+            <a href="/project-2" class="group block bg-gray-100 rounded-lg overflow-hidden relative"><img src="./assets/project-2/image-2.png" alt="[PROJECT 2 NAME] - Image 2" class="h-auto max-w-full object-cover object-center w-full" loading="lazy" decoding="async"><div class="absolute inset-0 bg-black/50 text-white p-4 flex flex-col justify-end transition-opacity opacity-100 md:opacity-0 md:group-hover:opacity-100"><h3 class="text-lg font-semibold">[PROJECT 2 NAME]</h3><p class="text-sm">[Brief Description]</p></div></a>
+            <!-- PROJECT 3 - Image 1 -->
+            <a href="/project-3" class="group block bg-gray-100 rounded-lg overflow-hidden relative"><img src="./assets/project-3/image-1.png" alt="[PROJECT 3 NAME] - Image 1" class="h-auto max-w-full object-cover object-center w-full" loading="lazy" decoding="async"><div class="absolute inset-0 bg-black/50 text-white p-4 flex flex-col justify-end transition-opacity opacity-100 md:opacity-0 md:group-hover:opacity-100"><h3 class="text-lg font-semibold">[PROJECT 3 NAME]</h3><p class="text-sm">[Tech Stack • Listed • Here]</p></div></a>
+            <!-- PROJECT 3 - Image 2 -->
+            <a href="/project-3" class="group block bg-gray-100 rounded-lg overflow-hidden relative"><img src="./assets/project-3/image-2.png" alt="[PROJECT 3 NAME] - Image 2" class="h-auto max-w-full object-cover object-center w-full" loading="lazy" decoding="async"><div class="absolute inset-0 bg-black/50 text-white p-4 flex flex-col justify-end transition-opacity opacity-100 md:opacity-0 md:group-hover:opacity-100"><h3 class="text-lg font-semibold">[PROJECT 3 NAME]</h3><p class="text-sm">[Brief Description]</p></div></a>
+            <!-- PROJECT 4 - Image 1 -->
+            <a href="/project-4" class="group block bg-gray-100 rounded-lg overflow-hidden relative"><img src="./assets/project-4/image-1.png" alt="[PROJECT 4 NAME] - Image 1" class="h-auto max-w-full object-cover object-center w-full" loading="lazy" decoding="async"><div class="absolute inset-0 bg-black/50 text-white p-4 flex flex-col justify-end transition-opacity opacity-100 md:opacity-0 md:group-hover:opacity-100"><h3 class="text-lg font-semibold">[PROJECT 4 NAME]</h3><p class="text-sm">[Tech Stack • Listed • Here]</p></div></a>
+            <!-- PROJECT 4 - Image 2 -->
+            <a href="/project-4" class="group block bg-gray-100 rounded-lg overflow-hidden relative"><img src="./assets/project-4/image-2.png" alt="[PROJECT 4 NAME] - Image 2" class="h-auto max-w-full object-cover object-center w-full" loading="lazy" decoding="async"><div class="absolute inset-0 bg-black/50 text-white p-4 flex flex-col justify-end transition-opacity opacity-100 md:opacity-0 md:group-hover:opacity-100"><h3 class="text-lg font-semibold">[PROJECT 4 NAME]</h3><p class="text-sm">[Brief Description]</p></div></a>
+        </div>
+        <!-- TODO: Update social media links with your own profiles -->
+        <!-- Remove any social links you don't want to display -->
+        <div class="reach-out-section"><h2 class="social-title">Connect with Me</h2><div class="social-links">
+            <!-- LinkedIn -->
+            <a href="[INSERT YOUR LINKEDIN URL HERE]" target="_blank" rel="noopener noreferrer" class="group hover:bg-sky-600 relative bg-sky-700 rounded text-neutral-50 duration-500 font-bold flex justify-start gap-2 items-center p-2 pr-6" aria-label="LinkedIn: [INSERT YOUR LINKEDIN USERNAME HERE]">
+                <svg class="w-8 h-8 fill-neutral-50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+                </svg>
+                <span class="border-l-2 px-1">[INSERT YOUR LINKEDIN USERNAME HERE]</span>
+            </a>
+            <!-- GitHub -->
+            <a href="[INSERT YOUR GITHUB URL HERE]" target="_blank" rel="noopener noreferrer" class="group hover:bg-gray-700 relative bg-gray-800 rounded text-neutral-50 duration-500 font-bold flex justify-start gap-2 items-center p-2 pr-6" aria-label="GitHub: [INSERT YOUR GITHUB USERNAME HERE]">
+                <svg class="w-8 h-8 fill-neutral-50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                </svg>
+                <span class="border-l-2 px-1">[INSERT YOUR GITHUB USERNAME HERE]</span>
+            </a>
+            <!-- Email -->
+            <a href="mailto:[INSERT YOUR EMAIL HERE]" class="group hover:bg-red-600 relative bg-red-700 rounded text-neutral-50 duration-500 font-bold flex justify-start gap-2 items-center p-2 pr-6" aria-label="Email: [INSERT YOUR EMAIL HERE]">
+                <svg class="w-8 h-8 fill-neutral-50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+                </svg>
+                <span class="border-l-2 px-1">[INSERT YOUR EMAIL HERE]</span>
+            </a>
+            <!-- Substack (Optional - Remove if not needed) -->
+            <a href="[INSERT YOUR SUBSTACK URL HERE]" target="_blank" rel="noopener noreferrer" class="group hover:bg-orange-600 relative bg-orange-700 rounded text-neutral-50 duration-500 font-bold flex justify-start gap-2 items-center p-2 pr-6" aria-label="Substack: [INSERT YOUR SUBSTACK PUBLICATION NAME HERE]">
+                <svg class="w-8 h-8 fill-neutral-50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"></path>
+                </svg>
+                <span class="border-l-2 px-1">[INSERT YOUR SUBSTACK USERNAME HERE]</span>
+            </a>
+        </div></div>
+    </div></section>
+    <!-- TODO: Update footer navigation -->
+    <footer class="footer"><div class="container"><div class="footer-content"><div class="footer-section footer-center"><p class="footer-copyright">© 2025 Portfolio. All rights reserved.</p></div><div class="footer-section footer-navigation"><h3 class="footer-title">NAVIGATION</h3><div class="footer-links"><a href="#intro" class="footer-link">Intro</a><a href="#about" class="footer-link">About</a><a href="#projects" class="footer-link">Art Pieces</a></div></div></div></div></footer>
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path fill="currentColor" d="M11.9997 10.8284L7.04996 15.7782L5.63574 14.364L11.9997 8L18.3637 14.364L16.9495 15.7782L11.9997 10.8284Z"></path>
+        </svg>
+    </button>
+    <script src="./script.js" defer></script>
+</body>
+</html>
+
