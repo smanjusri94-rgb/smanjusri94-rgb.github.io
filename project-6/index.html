@@ -1,1 +1,224 @@
-gi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>22 GHz Full Receiver Front-End</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+<!-- HEADER -->
+<header class="bg-slate-900 text-white py-10 text-center">
+  <h1 class="text-4xl font-bold">
+    22 GHz Full Receiver Front-End Design
+  </h1>
+  <p class="mt-4 text-lg max-w-3xl mx-auto">
+    Integrated mmWave receiver combining LNA, Gilbert-cell mixer,
+    and on-chip VCO for 5G applications
+  </p>
+  <a href="../index.html" class="mt-6 inline-block text-sky-400 hover:text-sky-300">
+    ← Back to Portfolio
+  </a>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 py-10 space-y-16">
+
+<!-- OVERVIEW -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">1. System Overview & Specifications</h2>
+  <p class="text-gray-700 leading-relaxed">
+    This project presents the complete design and integration of a
+    <strong>22 GHz mmWave receiver front-end</strong> using the individual
+    building blocks developed in previous projects: a low-noise amplifier (LNA),
+    a double-balanced Gilbert-cell mixer, and a differential LC VCO.
+    <br><br>
+    The goal was to demonstrate system-level optimization while meeting
+    stringent RF specifications under realistic power and layout constraints.
+    All circuits operate from a common <strong>1.8 V supply</strong>.
+    <br><br>
+    <strong>Target Specifications:</strong><br>
+    Frequency Range: 21–24 GHz<br>
+    Conversion Gain: &gt; 27 dB<br>
+    Noise Figure: &lt; 4 dB<br>
+    Input Match: S11 &lt; −10 dB<br>
+    IIP3: &gt; −10 dBm<br>
+    Power Consumption: &lt; 60 mW (with VCO)
+  </p>
+</section>
+
+<!-- BLOCK DIAGRAM -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">2. Receiver Architecture</h2>
+
+  <img src="../assets/project-6/rx_block.png"
+       alt="Receiver Block Diagram"
+       class="w-full rounded-lg shadow-lg">
+
+  <p class="mt-4 text-gray-700 leading-relaxed">
+    The receiver consists of an RF LNA followed by a down-conversion mixer and
+    a local oscillator. In Part I, an ideal LO source is used to evaluate the RF
+    signal chain. In Part II, the designed VCO is integrated to form a
+    fully self-contained receiver.
+  </p>
+</section>
+
+<!-- MATCHING -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">3. LNA–Mixer Conjugate Matching</h2>
+
+  <img src="../assets/project-6/rx_match.png"
+       alt="LNA to Mixer Matching Network"
+       class="w-full rounded-lg shadow-lg">
+  <img src="../assets/project-6/rx_match1.png"
+       alt="LNA to Mixer Matching Network"
+       class="w-full rounded-lg shadow-lg">
+
+  <p class="mt-4 text-gray-700 leading-relaxed">
+    Instead of matching each block to 50 Ω individually, the LNA output was
+    directly conjugately matched to the mixer RF input to maximize power transfer.
+    <br><br>
+    Extracted impedances at 22.5 GHz:
+    <br>
+    <strong>LNA Output:</strong> 85.98 + j271.73 Ω<br>
+    <strong>Mixer Input:</strong> 186.03 − j172.67 Ω
+    <br><br>
+    A compact LC network was designed using a Smith chart to transform the LNA
+    output impedance to the conjugate of the mixer input impedance, significantly
+    improving S22 and overall receiver gain.
+  </p>
+</section>
+
+<!-- GAIN -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">4. Conversion Gain & Linearity</h2>
+
+  <img src="../assets/project-6/rx_gain.png"
+       alt="Conversion Gain and Linearity"
+       class="w-full rounded-lg shadow-lg">
+
+  <p class="mt-4 text-gray-700 leading-relaxed">
+    With optimized biasing and matching, the receiver achieves a
+    <strong>peak conversion gain of 27.5 dB</strong>.
+     <img src="../assets/project-6/rx_iip3.png"
+       alt="Conversion Gain and Linearity"
+       class="w-full rounded-lg shadow-lg">
+    Two-tone simulations at 24 GHz confirm an
+    <strong>IIP3 of −7.97 dBm</strong>, meeting the system requirement.
+    <br><br>
+    A careful trade-off between LNA bias current and mixer transconductance
+    was used to balance linearity, gain, and power consumption.
+  </p>
+</section>
+
+<!-- NOISE -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">5. Noise Figure Performance</h2>
+
+  <img src="../assets/project-6/rx_nf.png"
+       alt="Noise Figure Plot"
+       class="w-full rounded-lg shadow-lg">
+
+  <p class="mt-4 text-gray-700 leading-relaxed">
+    The receiver achieves a minimum noise figure of
+    <strong>3.49 dB</strong> across the operating band.
+    Noise contribution analysis shows that the LNA dominates the overall NF,
+    validating the front-end noise optimization strategy.
+  </p>
+</section>
+
+<!-- FREQUENCY SWEEP -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">6. Wideband Frequency Performance</h2>
+
+  <img src="../assets/project-6/rx_sweep.png"
+       alt="Conversion Gain and NF vs Frequency"
+       class="w-full rounded-lg shadow-lg">
+    <img src="../assets/project-6/rx_sweep1.png"
+       alt="Conversion Gain and NF vs Frequency"
+       class="w-full rounded-lg shadow-lg">
+
+
+  <p class="mt-4 text-gray-700 leading-relaxed">
+    Sweeping the LO frequency from 21–24 GHz with a fixed IF of 100 MHz shows
+    stable receiver performance across the band.
+    Conversion gain decreases slightly at higher frequencies due to reduced
+    switching efficiency and increased parasitic effects, while NF remains
+    below 4 dB throughout.
+  </p>
+</section>
+
+<!-- INTERFERENCE -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">7. Interference & Gain Degradation</h2>
+
+  <img src="../assets/project-6/rx_interference.png"
+       alt="Gain Degradation vs Interference"
+       class="w-full rounded-lg shadow-lg">
+
+  <p class="mt-4 text-gray-700 leading-relaxed">
+    The receiver was tested under a strong adjacent-channel interferer.
+    As interferer power increases beyond −10 dBm, noticeable gain degradation
+    occurs due to mixer compression and desensitization, which is consistent
+    with expected mmWave receiver behavior.
+  </p>
+</section>
+
+<!-- LO LEAKAGE -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">8. LO Leakage Sensitivity</h2>
+
+  <img src="../assets/project-6/rx_lo_leakage.png"
+       alt="LO Leakage to IF"
+       class="w-full rounded-lg shadow-lg">
+
+  <p class="mt-4 text-gray-700 leading-relaxed">
+    Device mismatch was intentionally introduced in the mixer transconductance
+    devices to evaluate LO leakage. While ideal symmetry results in near-zero
+    leakage, mismatch produces observable LO feedthrough at the IF port,
+    highlighting the importance of layout symmetry in high-frequency designs.
+  </p>
+</section>
+
+<!-- VCO -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">9. Full Receiver with Integrated VCO</h2>
+
+  <img src="../assets/project-6/rx_vco.png"
+       alt="Receiver with Integrated VCO"
+       class="w-full rounded-lg shadow-lg">
+  <img src="../assets/project-6/rx_vco1.png"
+       alt="Receiver with Integrated VCO"
+       class="w-full rounded-lg shadow-lg">
+
+  <p class="mt-4 text-gray-700 leading-relaxed">
+    The designed differential VCO was integrated as the LO source,
+    forming a complete receiver front-end.
+    The total DC power consumption increases to
+    <strong>≈ 56.5 mW</strong>, remaining within the system constraint.
+    Transient and spectral simulations confirm correct down-conversion
+    and stable LO operation.
+  </p>
+</section>
+
+<!-- SUMMARY -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">10. Final Summary</h2>
+  <p class="text-gray-700 leading-relaxed">
+    This project demonstrates a fully integrated mmWave receiver front-end
+    meeting gain, noise, linearity, and power specifications.
+    It highlights practical system-level RF design trade-offs and
+    showcases end-to-end transceiver integration suitable for 5G applications.
+  </p>
+</section>
+
+</main>
+
+<footer class="bg-slate-900 text-white text-center py-6">
+  © 2025 Manjusri Sridhara · Analog / RF IC Design Portfolio
+</footer>
+
+</body>
+</html>
+
