@@ -4,13 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>MANJUSRI SRIDHARA | Analog / RF IC Design Portfolio</title>
+  <title>Manjusri Sridhara | Analog / RF IC Design Portfolio</title>
 
-  <meta name="description" content="Manjusri Sridhara — Analog and RF IC design graduate student specializing in transistor-level design, high-gain amplifiers, and RF/mmWave front-end circuits." />
+  <meta name="description" content="Analog and RF IC design graduate student with strong transistor-level design experience in amplifiers, LNAs, and RF front-end circuits." />
   <meta name="author" content="Manjusri Sridhara" />
-  <meta name="robots" content="index, follow" />
 
-  <link rel="icon" type="image/png" href="./assets/web-logo.png" />
+  <link rel="icon" href="./assets/web-logo.png" />
   <link rel="canonical" href="https://smanjusri94-rgb.github.io/" />
 
   <!-- Fonts -->
@@ -36,7 +35,6 @@
   <link rel="stylesheet" href="./styles.css" />
 
   <style>
-    /* HERO TEXT */
     .welcome-title {
       color: #edc579;
       font-size: clamp(1.8rem, 4vw, 2.6rem);
@@ -52,7 +50,6 @@
       margin-top: 0.5rem;
     }
 
-    /* Rotating word */
     .text-flip-container {
       display: inline-block;
       transition: opacity 0.4s ease, transform 0.4s ease;
@@ -67,10 +64,9 @@
 
 <body class="font-serif">
 
-<!-- ================= HERO / INTRO ================= -->
+<!-- ================= INTRO ================= -->
 <section
   id="intro"
-  class="welcome-section"
   style="
     background:
       linear-gradient(rgba(40,30,20,0.35), rgba(40,30,20,0.35)),
@@ -86,8 +82,8 @@
       <span id="rotating-word" class="text-flip-container">PORTFOLIO</span>
     </h1>
 
-    <p class="welcome-subtitle mt-4">
-      Hi, my name is <strong>Manjusri Sridhara</strong>
+    <p class="welcome-subtitle">
+      Hi, I’m <strong>Manjusri Sridhara</strong>
     </p>
 
     <p class="welcome-tagline">
@@ -97,27 +93,21 @@
 </section>
 
 <!-- ================= ABOUT ================= -->
-<section id="about" class="about-section py-20">
+<section id="about" class="py-20">
   <div class="container mx-auto px-4">
 
-    <h2 class="about-title text-center mb-10 text-3xl font-semibold">
-      About Me
-    </h2>
+    <h2 class="text-3xl font-semibold text-center mb-10">About Me</h2>
 
     <div class="flex flex-wrap gap-10 items-center justify-center">
 
-      <!-- Profile Image -->
-      <div class="flex-shrink-0 text-center">
-        <img
-          src="./assets/manjusri.jpeg"
-          alt="Manjusri Sridhara"
-          class="w-56 h-56 object-cover rounded-full shadow-xl"
-        />
-      </div>
+      <img
+        src="./assets/manjusri.jpeg"
+        alt="Manjusri Sridhara"
+        class="w-56 h-56 rounded-full object-cover shadow-xl"
+      />
 
-      <!-- About Text -->
       <div class="max-w-2xl">
-        <p class="about-text text-lg leading-relaxed">
+        <p class="text-lg leading-relaxed">
           I’m <strong>Manjusri Sridhara</strong>, a Master’s student at Arizona State University
           specializing in <strong>analog and RF integrated circuit design</strong>.
           I have strong transistor-level experience in high-gain amplifiers,
@@ -131,7 +121,7 @@
           My goal is to translate theory into robust, silicon-ready IC solutions.
         </p>
 
-        <div class="mt-8">
+        <div class="mt-6">
           <a
             href="./assets/resume.pdf"
             target="_blank"
@@ -147,34 +137,55 @@
 </section>
 
 <!-- ================= PROJECTS ================= -->
-<section id="projects" class="projects-section py-20 bg-neutral-100">
+<section id="projects" class="py-20 bg-neutral-100">
   <div class="container mx-auto px-4">
 
-    <h2 class="section-title text-center text-3xl font-semibold mb-12">
-      My Projects
-    </h2>
+    <h2 class="text-3xl font-semibold text-center mb-12">My Projects</h2>
 
-    <div class="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
       <!-- Project 1 -->
-      <a href="/project-1" class="block rounded-lg overflow-hidden shadow-lg bg-white">
-        <img src="./assets/project-1/lna1.png" alt="LNA Design" class="w-full" />
+      <a href="/project-1" class="bg-white rounded-lg shadow hover:shadow-xl transition">
+        <img src="./assets/project-1/lna1.png" class="rounded-t-lg" />
         <div class="p-4">
           <h3 class="font-semibold">Low Noise Amplifier</h3>
-          <p class="text-sm text-gray-600">
-            Source-degenerated RF LNA design
-          </p>
+          <p class="text-sm text-gray-600">Source-degenerated RF LNA</p>
         </div>
       </a>
 
       <!-- Project 2 -->
-      <a href="/project-2" class="block rounded-lg overflow-hidden shadow-lg bg-white">
-        <img src="./assets/project-2/tele1.png" alt="Telescopic Cascode" class="w-full" />
+      <a href="/project-2" class="bg-white rounded-lg shadow hover:shadow-xl transition">
+        <img src="./assets/project-2/tele1.png" class="rounded-t-lg" />
         <div class="p-4">
           <h3 class="font-semibold">Telescopic Cascode OTA</h3>
-          <p class="text-sm text-gray-600">
-            High-gain differential amplifier
-          </p>
+          <p class="text-sm text-gray-600">High-gain differential amplifier</p>
+        </div>
+      </a>
+
+      <!-- Project 3 -->
+      <a href="/project-3" class="bg-white rounded-lg shadow hover:shadow-xl transition">
+        <img src="./assets/project-3/image-1.png" class="rounded-t-lg" />
+        <div class="p-4">
+          <h3 class="font-semibold">Folded Cascode Amplifier</h3>
+          <p class="text-sm text-gray-600">Low-voltage analog design</p>
+        </div>
+      </a>
+
+      <!-- Project 4 -->
+      <a href="/project-4" class="bg-white rounded-lg shadow hover:shadow-xl transition">
+        <img src="./assets/project-4/image-1.png" class="rounded-t-lg" />
+        <div class="p-4">
+          <h3 class="font-semibold">RF Mixer</h3>
+          <p class="text-sm text-gray-600">Passive / Active mixer analysis</p>
+        </div>
+      </a>
+
+      <!-- Project 5 -->
+      <a href="/project-5" class="bg-white rounded-lg shadow hover:shadow-xl transition">
+        <img src="./assets/project-5/image-1.png" class="rounded-t-lg" />
+        <div class="p-4">
+          <h3 class="font-semibold">Biasing Circuits</h3>
+          <p class="text-sm text-gray-600">Robust bias generation</p>
         </div>
       </a>
 
@@ -182,6 +193,50 @@
   </div>
 </section>
 
+<!-- ================= CONNECT ================= -->
+<section class="py-16 text-center">
+  <h2 class="text-2xl font-semibold mb-6">Connect with Me</h2>
+
+  <div class="flex justify-center gap-6 flex-wrap">
+
+    <a href="https://www.linkedin.com/in/manjusri-s-9a368b207" target="_blank"
+       class="bg-sky-700 text-white px-6 py-3 rounded-lg hover:bg-sky-600 transition">
+      LinkedIn
+    </a>
+
+    <a href="https://github.com/smanjusri94-rgb" target="_blank"
+       class="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition">
+      GitHub
+    </a>
+
+    <a href="mailto:msridh15@asu.edu"
+       class="bg-red-700 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition">
+      Email
+    </a>
+
+  </div>
+</section>
+
 <!-- ================= FOOTER ================= -->
-<footer class="py-10 bg-neutral-900 text-neutral-300">
-  <div class="container mx-au
+<footer class="py-8 bg-neutral-900 text-neutral-300 text-center">
+  © 2025 Manjusri Sridhara. All rights reserved.
+</footer>
+
+<!-- ================= JS ================= -->
+<script>
+  const words = ["PORTFOLIO", "WEBSITE", "PAGE", "REPOSITORY"];
+  let index = 0;
+  const wordEl = document.getElementById("rotating-word");
+
+  setInterval(() => {
+    wordEl.classList.add("fade-out");
+    setTimeout(() => {
+      index = (index + 1) % words.length;
+      wordEl.textContent = words[index];
+      wordEl.classList.remove("fade-out");
+    }, 400);
+  }, 2000);
+</script>
+
+</body>
+</html>
