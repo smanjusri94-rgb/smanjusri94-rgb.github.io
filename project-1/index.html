@@ -14,6 +14,14 @@
   <h1 class="text-4xl font-bold">22–24 GHz Source-Degenerated Cascode LNA</h1>
   <p class="mt-4 text-lg">
     Designed to meet low-noise, high-gain, and stability requirements for mmWave RF front-ends
+
+Tools: Cadence Virtuoso, SpectreRF, Smith Chart Utility
+Design Focus: RF front-end LNA with gain, NF, stability, and matching optimization
+Frequency Range: 21–24 GHz (center freq ≈ 22–22.5 GHz)
+
+
+Designed a source-degenerated cascode Low Noise Amplifier (LNA) operating in the 21–24 GHz band with stringent RF performance targets. The design required full device sizing, bias optimization, noise analysis, matching network creation, stability verification, and linearity extraction.
+The project focused on achieving simultaneous noise matching, power matching, high gain, strong linearity, and low power consumption within practical on-chip inductor constraints (Q = 15, L < 1 nH).
   </p>
   <a href="../index.html" class="mt-6 inline-block text-sky-400 hover:text-sky-300">
     ← Back to Portfolio
@@ -151,6 +159,18 @@
     The final LNA consumes <strong>11.8 mW</strong> from a 1.8 V supply and
     is unconditionally stable across the frequency band, as verified using
     K-Δ and μ-factor analysis.
+
+    
+What is the maximum degradation of NF?
+    The low measured IIP3 of the LNA (≈ −10 dBm), despite meeting the required gain, S-parameter, and noise figure (NF) specifications, can be explained by its design choices. The LNA was optimized using low overdrive voltage and relatively strong
+source degeneration, which provide excellent input impedance matching and low NF but keep the transistor’s transconductance in a region where nonlinearities significantly impact third-order intermodulation distortion.
+
+Slightly increasing the source-degeneration inductance or adjusting device sizing can offer only marginal improvements in linearity, since this feedback mechanism inherently trades linearity for gain and affects both impedance and noise matching.
+Alternatively, increasing the transistor overdrive (by raising the bias current or device width) enhances linearity by boosting 𝑔𝑚 and reducing the relative contribution of higher-order distortion terms. However, this also shifts the matching point and may
+degrade NF and/or increase DC power consumption.
+
+Hence, the observed performance strong gain, NF, and S-parameter results but poor IIP3 is consistent with a design focused on achieving low noise and high matched gain
+at the expense of linearity
   </p>
 </section>
 
