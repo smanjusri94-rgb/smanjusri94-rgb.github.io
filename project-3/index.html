@@ -1,166 +1,225 @@
-<section id="project-3" class="project-detail">
-  <div class="project-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Single-Ended NMOS Folded Cascode Amplifier</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-    <h1 class="project-title">
-      Single-Ended NMOS Folded Cascode Amplifier with Class-AB Output Buffer
-    </h1>
+<body class="bg-gray-50 text-gray-900">
 
-    <p class="project-subtitle">
-      EEE523 – Advanced Analog IC Design (Cadence Virtuoso)
-    </p>
+<!-- HEADER -->
+<header class="bg-slate-900 text-white py-10 text-center">
+  <h1 class="text-4xl font-bold">
+    Single-Ended NMOS Folded Cascode Amplifier
+  </h1>
+  <p class="mt-4 text-lg">
+    High-gain, low-power analog amplifier with Class-AB output buffer
+  </p>
+  <p class="mt-2 text-sm text-gray-300">
+    EEE523 – Advanced Analog IC Design · Cadence Virtuoso
+  </p>
 
-    <!-- ================= OVERVIEW ================= -->
-    <h2>Project Overview</h2>
-    <p>
-      This project involves the transistor-level design and simulation of a
-      <strong>single-ended NMOS input folded cascode amplifier</strong> integrated
-      with a <strong>Class-AB output buffer</strong>. The objective was to achieve
-      high open-loop gain, adequate stability, low distortion, and low noise while
-      operating under strict power constraints.
-    </p>
-    <p>
-      The complete design was implemented and verified using
-      <strong>Cadence Virtuoso and Spectre</strong>, with performance validated
-      through extensive transient, AC, distortion, noise, PSRR, and CMRR simulations.
-    </p>
+  <a href="../index.html" class="mt-6 inline-block text-sky-400 hover:text-sky-300">
+    ← Back to Portfolio
+  </a>
+</header>
 
-    <!-- ================= TOPOLOGY IMAGE ================= -->
-    <div class="project-image">
-      <img src="../assets/project-3/project3_topology.png" alt="Folded Cascode Amplifier Topology">
-      <p class="image-caption">
-        Fig. 1 – NMOS folded cascode amplifier with Class-AB output buffer
-      </p>
-    </div>
+<main class="max-w-5xl mx-auto px-6 py-10 space-y-16">
 
-    <!-- ================= SPECIFICATIONS ================= -->
-    <h2>Design Specifications</h2>
-    <ul>
-      <li><strong>Supply Voltage (VDD):</strong> 3 V</li>
-      <li><strong>Quiescent Power Dissipation:</strong> ~2 mW</li>
-      <li><strong>Total Bias Current:</strong> ~666 µA</li>
-      <li><strong>Input Common-Mode Range:</strong> 1.5 V – 2.5 V</li>
-    </ul>
+<!-- 1. OVERVIEW -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">1. Project Overview</h2>
 
-    <!-- ================= TOOLS ================= -->
-    <h2>Tools & Software Used</h2>
-    <ul>
-      <li><strong>Cadence Virtuoso:</strong> Schematic capture and circuit design</li>
-      <li><strong>Cadence ADE:</strong> Simulation setup and parametric sweeps</li>
-      <li><strong>Spectre Simulator:</strong> Accurate transistor-level analysis</li>
-    </ul>
+  <p class="text-gray-700 leading-relaxed">
+    This project focuses on the transistor-level design and simulation of a
+    <strong>single-ended NMOS input folded cascode amplifier</strong> integrated
+    with a <strong>Class-AB output buffer</strong>. The objective was to achieve
+    high open-loop gain, adequate stability, low distortion, and low noise while
+    operating under strict power constraints.
+  </p>
 
-    <!-- ================= TRANSIENT ================= -->
-    <h2>Transient Simulations</h2>
-    <p>
-      Transient simulations were performed with the amplifier configured as an
-      inverting amplifier with a gain of 0 dB. Output swing and large-signal behavior
-      were verified under nominal bias conditions.
-    </p>
-    <ul>
-      <li>Achieved 1 V<sub>pp</sub> output swing</li>
-      <li>Stable operation across input common-mode range</li>
-    </ul>
-
-    <div class="project-image">
-      <img src="../assets/project-3/project3_transient.png" alt="Transient Output Waveform">
-      <p class="image-caption">
-        Fig. 2 – Transient output waveform showing 1 Vpp swing
-      </p>
-    </div>
-
-    <!-- ================= VCM SWEEP ================= -->
-    <h2>Input Common-Mode Sweep</h2>
-    <p>
-      The input common-mode voltage was swept from 1.5 V to 2.5 V in 200 mV steps
-      while observing the transient output response. This verified correct amplifier
-      operation across the specified common-mode range.
-    </p>
-
-    <!-- ================= DISTORTION ================= -->
-    <h2>Distortion Analysis</h2>
-    <p>
-      Harmonic distortion was evaluated using a 5 kHz sinusoidal input at mid-supply
-      common-mode voltage. The third-order harmonic distortion (HD3) was extracted
-      using spectrum analysis.
-    </p>
-    <ul>
-      <li><strong>HD3 ≈ 50.6 dB</strong></li>
-    </ul>
-
-    <div class="project-image">
-      <img src="../assets/project-3/project3_distortion.png" alt="HD3 Spectrum">
-      <p class="image-caption">
-        Fig. 3 – Frequency spectrum showing third-order harmonic distortion
-      </p>
-    </div>
-
-    <!-- ================= SLEW RATE ================= -->
-    <h2>Slew Rate Measurement</h2>
-    <p>
-      Slew rate was measured by configuring the amplifier as a unity-gain follower
-      with a 1 pF capacitive load. A piecewise linear (vpwl) input was used to
-      extract the large-signal slew behavior.
-    </p>
-    <ul>
-      <li><strong>Slew Rate ≈ 10 V/µs</strong></li>
-    </ul>
-
-    <!-- ================= AC ================= -->
-    <h2>AC Gain & Stability Analysis</h2>
-    <ul>
-      <li>Open-loop DC gain: <strong>~98 dB</strong></li>
-      <li>Unity Gain Frequency: <strong>> 10 MHz</strong></li>
-      <li>Phase Margin: <strong>~61°</strong></li>
-      <li>Gain Margin: <strong>~26 dB</strong></li>
-    </ul>
-
-    <div class="project-image">
-      <img src="../assets/project-3/project3_ac.jpg" alt="AC Gain and Phase">
-      <p class="image-caption">
-        Fig. 4 – AC magnitude and phase response
-      </p>
-    </div>
-
-    <!-- ================= PSRR / CMRR ================= -->
-    <h2>PSRR & CMRR</h2>
-    <ul>
-      <li>PSRR @ 10 kHz: <strong>> 70 dB</strong></li>
-      <li>CMRR @ 10 kHz: <strong>> 70 dB</strong></li>
-    </ul>
-
-    <!-- ================= NOISE ================= -->
-    <h2>Noise Analysis</h2>
-    <p>
-      Noise simulations were performed to evaluate the input-referred thermal noise
-      performance of the amplifier.
-    </p>
-    <ul>
-      <li>Input-referred noise floor: <strong>≤ 15 nV/√Hz</strong></li>
-    </ul>
-
-    <!-- ================= DESIGN CONSIDERATIONS ================= -->
-    <h2>Design & Matching Considerations</h2>
-    <p>
-      Although physical layout was not part of this project, careful attention was
-      paid to transistor matching and symmetry at the schematic level to ensure
-      consistent circuit behavior.
-    </p>
-    <ul>
-      <li>Matching of NMOS input devices</li>
-      <li>Consistent sizing of folded cascode transistors</li>
-      <li>Matched current mirrors in biasing circuits</li>
-      <li>Symmetry between NMOS and PMOS current paths</li>
-    </ul>
-
-    <!-- ================= CONCLUSION ================= -->
-    <h2>Conclusion</h2>
-    <p>
-      This project demonstrates a low-power, high-gain analog amplifier design that
-      meets stringent requirements for stability, distortion, noise, and robustness
-      across common-mode variations. The folded cascode topology combined with a
-      Class-AB output buffer provides an effective balance between performance and
-      power efficiency.
-    </p>
-
-  </div>
+  <p class="mt-4 text-gray-700 leading-relaxed">
+    The complete design was implemented and verified using
+    <strong>Cadence Virtuoso and Spectre</strong>, with extensive validation through
+    transient, AC, distortion, noise, PSRR, and CMRR simulations.
+  </p>
 </section>
+
+<!-- 2. ARCHITECTURE -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">2. Amplifier Architecture</h2>
+
+  <img src="../assets/project-3/project3_topology.png"
+       alt="Folded Cascode Amplifier Schematic"
+       class="w-full rounded-lg shadow-lg">
+
+  <p class="mt-4 text-gray-700 leading-relaxed">
+    The amplifier employs an NMOS input folded cascode topology to achieve high
+    intrinsic gain while maintaining a wide input common-mode range. A Class-AB
+    output buffer is used to improve large-signal drive capability without
+    significantly increasing quiescent power consumption.
+  </p>
+</section>
+
+<!-- 3. DESIGN SPECS -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">3. Design Specifications</h2>
+
+  <ul class="list-disc list-inside text-gray-700 space-y-2">
+    <li><strong>Supply Voltage (VDD):</strong> 3 V</li>
+    <li><strong>Total Bias Current:</strong> ~666 µA</li>
+    <li><strong>Quiescent Power:</strong> ~2 mW</li>
+    <li><strong>Input Common-Mode Range:</strong> 1.5 V – 2.5 V</li>
+  </ul>
+</section>
+
+<!-- 4. TOOLS -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">4. Tools & Design Environment</h2>
+
+  <ul class="list-disc list-inside text-gray-700 space-y-2">
+    <li><strong>Cadence Virtuoso:</strong> Schematic capture and device sizing</li>
+    <li><strong>Cadence ADE:</strong> Simulation setup and sweeps</li>
+    <li><strong>Spectre:</strong> Accurate transistor-level simulations</li>
+    <li><strong>ViVA:</strong> Waveform, FFT, and frequency-domain analysis</li>
+  </ul>
+</section>
+
+<!-- 5. TRANSIENT -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">5. Transient Performance</h2>
+
+  <img src="../assets/project-3/project3_transient.png"
+       alt="Transient Output Waveform"
+       class="w-full rounded-lg shadow-lg">
+
+  <p class="mt-4 text-gray-700 leading-relaxed">
+    Transient simulations were performed with the amplifier configured as an
+    inverting amplifier with 0 dB closed-loop gain. The results confirm stable
+    operation and a peak-to-peak output swing of approximately 1 V.
+  </p>
+</section>
+
+<!-- 6. VCM SWEEP -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">6. Input Common-Mode Sweep</h2>
+
+  <p class="text-gray-700 leading-relaxed">
+    The input common-mode voltage was swept from 1.5 V to 2.5 V in 200 mV steps
+    while monitoring the transient output response. Proper biasing and linear
+    operation were maintained across the entire specified range.
+  </p>
+</section>
+
+<!-- 7. DISTORTION -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">7. Distortion Analysis</h2>
+
+  <img src="../assets/project-3/project3_distortion.png"
+       alt="HD3 Spectrum"
+       class="w-full rounded-lg shadow-lg">
+
+  <p class="mt-4 text-gray-700 leading-relaxed">
+    Harmonic distortion was evaluated using a 5 kHz sinusoidal input at mid-supply
+    common-mode voltage. The third-order harmonic distortion (HD3) was extracted
+    from the output spectrum.
+  </p>
+
+  <p class="mt-2 text-gray-700">
+    <strong>Measured HD3 ≈ 50.6 dB</strong>
+  </p>
+</section>
+
+<!-- 8. SLEW RATE -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">8. Slew Rate Measurement</h2>
+
+  <p class="text-gray-700 leading-relaxed">
+    Slew rate was measured by configuring the amplifier as a unity-gain follower
+    driving a 1 pF capacitive load. A piecewise linear (vpwl) input was applied
+    to extract the large-signal response.
+  </p>
+
+  <p class="mt-2 text-gray-700">
+    <strong>Slew Rate ≈ 10 V/µs</strong>
+  </p>
+</section>
+
+<!-- 9. AC ANALYSIS -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">9. AC Gain & Stability</h2>
+
+  <img src="../assets/project-3/project3_ac.jpg"
+       alt="AC Gain and Phase Response"
+       class="w-full rounded-lg shadow-lg">
+
+  <ul class="mt-4 list-disc list-inside text-gray-700 space-y-2">
+    <li>DC Gain: <strong>~98 dB</strong></li>
+    <li>Unity Gain Frequency: <strong>> 10 MHz</strong></li>
+    <li>Phase Margin: <strong>~61°</strong></li>
+    <li>Gain Margin: <strong>~26 dB</strong></li>
+  </ul>
+</section>
+
+<!-- 10. PSRR / CMRR -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">10. PSRR & CMRR</h2>
+
+  <ul class="list-disc list-inside text-gray-700 space-y-2">
+    <li>PSRR @ 10 kHz: <strong>> 70 dB</strong></li>
+    <li>CMRR @ 10 kHz: <strong>> 70 dB</strong></li>
+  </ul>
+</section>
+
+<!-- 11. NOISE -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">11. Noise Performance</h2>
+   <img src="../assets/project-3/project3_noise.jpg"
+       alt="Noise Analysis"
+       class="w-full rounded-lg shadow-lg">
+
+  <p class="text-gray-700 leading-relaxed">
+    Noise simulations were performed to evaluate the input-referred thermal noise
+    of the amplifier under nominal bias conditions.
+  </p>
+
+  <p class="mt-2 text-gray-700">
+    <strong>Input-referred noise ≤ 15 nV/√Hz</strong>
+  </p>
+</section>
+
+<!-- 12. DESIGN CONSIDERATIONS -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">12. Design & Matching Considerations</h2>
+
+  <p class="text-gray-700 leading-relaxed">
+    Although physical layout was not part of this project, careful attention was
+    paid to device matching and symmetry at the schematic level to ensure robust
+    and repeatable circuit behavior.
+  </p>
+
+  <ul class="mt-2 list-disc list-inside text-gray-700 space-y-2">
+    <li>Matched NMOS input transistors</li>
+    <li>Consistent folded cascode device sizing</li>
+    <li>Matched current mirrors in bias circuitry</li>
+    <li>Symmetric signal paths</li>
+  </ul>
+</section>
+
+<!-- 13. CONCLUSION -->
+<section>
+  <h2 class="text-2xl font-semibold mb-4">13. Conclusion</h2>
+
+  <p class="text-gray-700 leading-relaxed">
+    This project demonstrates a low-power, high-gain analog amplifier design
+    achieving strong stability, low distortion, and low noise across the specified
+    operating range. The folded cascode topology combined with a Class-AB output
+    buffer provides an effective trade-off between performance and power efficiency.
+  </p>
+</section>
+
+</main>
+
+<footer class="bg-slate-900 tex
